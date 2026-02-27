@@ -1,0 +1,254 @@
+/* Custom CSS for Portfolio - Blue Theme */
+
+/* Dot Pattern Background */
+.dot-pattern {
+    background-image: radial-gradient(circle, rgba(3, 105, 161, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Typing Effect */
+.typing-text {
+    display: inline-block;
+    border-right: 3px solid #0369a1;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #0369a1; }
+}
+
+/* Font Families */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes float-2 {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(15, 118, 185, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(15, 118, 185, 0.6);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-2 {
+    animation: float-2 7s ease-in-out infinite;
+}
+
+/* Glass Morphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-light {
+    background: rgba(240, 249, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(3, 105, 161, 0.2);
+}
+
+.glass-card-dark {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(3, 105, 161, 0.2);
+}
+
+/* Skill Cards */
+.skill-card {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(3, 105, 161, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background: rgba(3, 105, 161, 0.1);
+    border-color: rgba(3, 105, 161, 0.3);
+    transform: translateX(5px);
+}
+
+/* Tool Badges */
+.tool-badge {
+    background: linear-gradient(135deg, rgba(3, 105, 161, 0.1), rgba(15, 118, 185, 0.1));
+    border: 1px solid rgba(3, 105, 161, 0.3);
+    border-radius: 0.75rem;
+    color: #0369a1;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tool-badge:hover {
+    background: linear-gradient(135deg, rgba(3, 105, 161, 0.2), rgba(15, 118, 185, 0.2));
+    border-color: rgba(3, 105, 161, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(3, 105, 161, 0.3);
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+    gap: 0.75rem;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar - Blue Theme */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f9ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0369a1, #075985);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #075985, #0369a1);
+}
+
+/* Form Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background-color: rgba(3, 105, 161, 0.05);
+    box-shadow: 0 0 20px rgba(3, 105, 161, 0.2);
+}
+
+/* Button Animations */
+button[type="submit"]:hover {
+    animation: glow 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .float-animation,
+    .float-animation-2 {
+        display: none;
+    }
+}
+
+/* Text Gradient Animation */
+@keyframes textShimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: slideInUp 0.8s ease-out;
+}
+
+/* Delay animations for staggered effect */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+/* Active Navigation Link */
+nav a.text-sky-700 {
+    font-weight: 600;
+    border-bottom: 2px solid #0369a1;
+    padding-bottom: 2px;
+}
+
