@@ -22,6 +22,48 @@
     border-radius: 2px;
 }
 
+/* Nav Hover Pill Effect */
+.nav-pill:hover {
+    background: rgba(14, 165, 233, 0.1);
+}
+
+/* CTA Pulse Animation */
+@keyframes ctaPulse {
+    0%, 100% {
+        box-shadow: 0 4px 6px -1px rgba(3, 105, 161, 0.3), 0 0 0 0 rgba(3, 105, 161, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 6px -1px rgba(3, 105, 161, 0.3), 0 0 0 8px rgba(3, 105, 161, 0);
+    }
+}
+
+.cta-pulse {
+    animation: ctaPulse 2.5s ease-in-out infinite;
+}
+
+.cta-pulse:hover {
+    animation: none;
+}
+
+/* Nav Shrink on Scroll */
+#navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#navbar.scrolled .nav-height {
+    height: 3.5rem;
+}
+
+#navbar.scrolled .w-10 {
+    width: 2rem;
+    height: 2rem;
+}
+
+#navbar.scrolled .text-xl {
+    font-size: 1rem;
+}
+
 /* Mobile Slide-in Menu */
 .mobile-menu-overlay {
     position: fixed;
@@ -99,6 +141,27 @@
 .floating-icon:nth-child(5) { animation-delay: 2s; }
 .floating-icon:nth-child(6) { animation-delay: 2.5s; }
 
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stats Counter Styling */
+.counter {
+    display: inline-block;
+}
+
+.counter::after {
+    content: '+';
+}
+
 /* Dot Pattern Background */
 .dot-pattern {
     background-image: radial-gradient(circle, rgba(3, 105, 161, 0.1) 1px, transparent 1px);
@@ -167,11 +230,12 @@
 
 /* Font Families */
 .font-poppins {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
 }
 
 .font-inter {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* Floating Animation */

@@ -63,6 +63,26 @@ function setActiveLink() {
 window.addEventListener('scroll', setActiveLink);
 setActiveLink(); // Run on load
 
+// Scroll Progress Bar
+const scrollProgress = document.getElementById('scrollProgress');
+const navbar = document.getElementById('navbar');
+
+function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollProgress.style.width = scrollPercent + '%';
+    
+    // Shrink navbar on scroll
+    if (scrollTop > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+
 // Typing Effect
 const typingElement = document.getElementById('typing-text');
 const roles = ['System Analyst', 'Digital Marketing Manager', 'Data Analyst', 'Process Optimizer', 'Tech Strategist'];
@@ -191,16 +211,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('shadow-lg');
-    } else {
-        navbar.classList.remove('shadow-lg');
-    }
-});
-
 // Add animation to progress bars on scroll
 const progressBars = document.querySelectorAll('.skill-card');
 const animateProgressBars = () => {
@@ -218,3 +228,83 @@ window.addEventListener('scroll', animateProgressBars);
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
+
+// Scroll Reveal Animation
+const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+function checkScrollReveal() {
+    scrollRevealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add('revealed');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkScrollReveal);
+window.addEventListener('load', checkScrollReveal);
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+let countersAnimated = false;
+
+function animateCounters() {
+    if (countersAnimated) return;
+    
+    const firstCounter = counters[0];
+    if (!firstCounter) return;
+    
+    const rect = firstCounter.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+        countersAnimated = true;
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        });
+    }
+}
+
+window.addEventListener('scroll', animateCounters);
+window.addEventListener('load', animateCounters);
+
+// Animated Skill Progress Bars
+const skillProgressBars = document.querySelectorAll('.skill-progress');
+let skillsAnimated = false;
+
+function animateSkillBars() {
+    if (skillsAnimated) return;
+    
+    const firstBar = skillProgressBars[0];
+    if (!firstBar) return;
+    
+    const rect = firstBar.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+        skillsAnimated = true;
+        
+        skillProgressBars.forEach((bar, index) => {
+            const targetWidth = bar.getAttribute('data-width');
+            setTimeout(() => {
+                bar.style.transition = 'width 1.5s ease-out';
+                bar.style.width = targetWidth;
+            }, index * 150);
+        });
+    }
+}
+
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('load', animateSkillBars);

@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGita Ibrahim | System Analyst & Digital Marketing Manager</title>
+    <title>Ggita Ibrahim | System Analyst & Digital Marketing Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900 font-inter">
+<body class="bg-white text-gray-900" style="font-family: 'Outfit', sans-serif;">
 
     <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 backdrop-blur-md bg-white/80 border-b border-sky-200">
+    <nav id="navbar" class="fixed w-full top-0 z-50 backdrop-blur-md bg-white/80 border-b border-sky-200 transition-all duration-300">
+        <!-- Scroll Progress Bar -->
+        <div id="scrollProgress" class="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-sky-500 to-blue-600 transition-all duration-150" style="width: 0%;"></div>
+        
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-2xl font-bold font-poppins text-sky-700">
-                    GGita Ibrahim
+            <div class="flex justify-between items-center h-16 nav-height transition-all duration-300">
+                <!-- Logo with Initials Badge -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-sky-600 to-blue-700 rounded-xl flex items-center justify-center shadow-md">
+                        <span class="text-white font-bold font-poppins text-lg">GI</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl font-bold font-poppins text-gray-800 hidden sm:block">Ggita Ibrahim</span>
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse" title="Available for work"></span>
+                    </div>
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-home text-sm"></i>Home
                     </a>
-                    <a href="#about" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                    <a href="#about" class="nav-link nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-user text-sm"></i>About
                     </a>
-                    <a href="#skills" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                    <a href="#skills" class="nav-link nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-code text-sm"></i>Skills
                     </a>
-                    <a href="#projects" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                    <a href="#projects" class="nav-link nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-briefcase text-sm"></i>Projects
                     </a>
-                    <a href="#contact" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                    <a href="#contact" class="nav-link nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-envelope text-sm"></i>Contact
                     </a>
-                    <a href="cv/GGita_Ibrahim_CV.pdf" download class="text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                    <a href="cv/Ggita_Ibrahim_CV.pdf" download class="nav-pill text-gray-600 hover:text-sky-700 transition-all font-medium flex items-center gap-1.5 px-3 py-2 rounded-lg">
                         <i class="fas fa-file-download text-sm"></i>Resume
                     </a>
-                    <a href="#contact" class="ml-2 px-5 py-2 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-md">
+                    <a href="#contact" class="ml-2 px-5 py-2 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-md cta-pulse">
                         Let's Talk
                     </a>
                 </div>
@@ -79,7 +89,7 @@
                 <a href="#contact" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
                     <i class="fas fa-envelope text-sky-600 w-5"></i>Contact
                 </a>
-                <a href="cv/GGita_Ibrahim_CV.pdf" download class="block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                <a href="cv/Ggita_Ibrahim_CV.pdf" download class="block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
                     <i class="fas fa-file-download text-sky-600 w-5"></i>Resume
                 </a>
                 <a href="#contact" class="block w-full text-center px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition mt-4">
@@ -98,9 +108,9 @@
         <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div>
-                <p class="text-xl text-sky-700 font-bold mb-2 animate-fade-in-up">Hello, I'm</p>
+                <p class="text-2xl text-sky-700 font-bold mb-2 animate-fade-in-up">Hello, I'm</p>
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight font-poppins text-gray-900 animate-fade-in-up" style="animation-delay: 0.1s;">
-                    GGita Ibrahim
+                    Ggita Ibrahim
                 </h1>
                 <p class="text-xl md:text-2xl text-sky-700 mb-4 font-poppins font-semibold animate-fade-in-up" style="animation-delay: 0.2s;">
                     <span id="typing-text" class="typing-text">System Analyst</span>
@@ -119,7 +129,7 @@
                     </span>
                 </div>
                 
-                <p class="text-base text-gray-600 mb-8 leading-relaxed max-w-md animate-fade-in-up" style="animation-delay: 0.4s;">
+                <p class="text-base text-gray-600 mb-8 leading-relaxed max-w-md animate-fade-in-up italic" style="animation-delay: 0.4s;">
                     I streamline business systems and run digital campaigns that get real results. Whether it's optimizing workflows or boosting your online presence — I've got you covered.
                 </p>
                 
@@ -136,13 +146,13 @@
                     <a href="#projects" class="px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
                         <i class="fas fa-briefcase mr-2"></i>View Work
                     </a>
-                    <a href="cv/GGita_Ibrahim_CV.pdf" download class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
+                    <a href="cv/Ggita_Ibrahim_CV.pdf" download class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
                         <i class="fas fa-download mr-2"></i>Download CV
                     </a>
                 </div>
 
                 <!-- Social Links Hero -->
-                <div class="flex gap-5 mt-8 animate-fade-in-up" style="animation-delay: 0.7s;">
+                <!-- <div class="flex gap-5 mt-8 animate-fade-in-up" style="animation-delay: 0.7s;">
                     <a href="#" class="text-gray-400 hover:text-sky-700 transition text-xl" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -155,14 +165,14 @@
                     <a href="https://wa.me/1234567890" target="_blank" class="text-gray-400 hover:text-green-600 transition text-xl" title="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                </div>
+                </div> -->
                 
                 <!-- Mini Testimonial -->
                 <div class="mt-8 p-4 bg-white/70 backdrop-blur-sm rounded-xl border border-sky-100 shadow-sm max-w-md animate-fade-in-up" style="animation-delay: 0.8s;">
                     <div class="flex items-start gap-3">
                         <i class="fas fa-quote-left text-sky-300 text-lg mt-1"></i>
                         <div>
-                            <p class="text-gray-600 text-sm italic">"GGita transformed our marketing strategy and increased our online engagement by 60%. Highly recommended!"</p>
+                            <p class="text-gray-600 text-sm italic">"Ggita transformed our marketing strategy and increased our online engagement by 60%. Highly recommended!"</p>
                             <p class="text-xs text-gray-400 mt-2 font-medium">— Happy Client</p>
                         </div>
                     </div>
@@ -234,26 +244,66 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 px-4 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900 font-poppins">About Me</h2>
+        <div class="max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sky-600 font-semibold text-sm uppercase tracking-wider">Get to know me</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 text-gray-900 font-poppins">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
             
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="glass-card p-8 rounded-2xl border-2 border-sky-200">
+            <!-- Stats Counter Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 scroll-reveal">
+                <div class="text-center p-6 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-100">
+                    <div class="text-4xl md:text-5xl font-bold text-sky-700 font-poppins counter" data-target="5">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Years Experience</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl border border-emerald-100">
+                    <div class="text-4xl md:text-5xl font-bold text-emerald-600 font-poppins counter" data-target="30">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Projects Completed</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
+                    <div class="text-4xl md:text-5xl font-bold text-purple-600 font-poppins counter" data-target="20">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Happy Clients</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-100">
+                    <div class="text-4xl md:text-5xl font-bold text-orange-500 font-poppins counter" data-target="15">0</div>
+                    <div class="text-gray-600 mt-2 font-medium">Campaigns Managed</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="glass-card p-8 rounded-2xl border-2 border-sky-200 scroll-reveal">
                     <h3 class="text-2xl font-semibold mb-4 text-sky-700 font-poppins flex items-center gap-2">
                         <i class="fas fa-user-circle text-sky-600"></i> Who I Am
                     </h3>
                     <p class="text-gray-700 leading-relaxed mb-4">
                         I'm a dedicated professional with expertise in systems analysis and digital marketing management. I have a passion for identifying inefficiencies in business processes and crafting data-driven marketing solutions.
                     </p>
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="text-gray-700 leading-relaxed mb-6">
                         My unique combination of technical and marketing skills allows me to bridge the gap between IT departments and marketing teams, ensuring seamless digital transformation initiatives.
                     </p>
+                    <a href="cv/Ggita_Ibrahim_CV.pdf" download class="inline-flex items-center gap-2 px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-md">
+                        <i class="fas fa-download"></i>Download Resume
+                    </a>
                 </div>
 
-                <div class="glass-card p-8 rounded-2xl border-2 border-blue-200">
+                <div class="glass-card p-8 rounded-2xl border-2 border-blue-200 scroll-reveal">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-700 font-poppins flex items-center gap-2">
                         <i class="fas fa-lightbulb text-yellow-500"></i> Quick Facts
                     </h3>
+                    
+                    <!-- Mission Statement -->
+                    <div class="mb-5 p-4 bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl border border-sky-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-bullseye text-sky-600"></i>
+                            <span class="font-semibold text-sky-700">My Mission</span>
+                        </div>
+                        <p class="text-gray-600 text-sm italic leading-relaxed">
+                            "To empower businesses with innovative systems and data-driven marketing strategies that drive measurable growth and operational excellence."
+                        </p>
+                    </div>
+                    
                     <div class="space-y-3">
                         <div class="flex items-start gap-3">
                             <span class="text-sky-700 text-xl mt-1"><i class="fas fa-check-circle"></i></span>
@@ -274,120 +324,373 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Career Timeline -->
+            <div class="mb-16 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800 font-poppins">
+                    <i class="fas fa-road text-sky-600 mr-2"></i>My Journey
+                </h3>
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-sky-400 to-blue-600 rounded-full hidden md:block"></div>
+                    
+                    <div class="space-y-8">
+                        <!-- Timeline Item 1 -->
+                        <div class="flex flex-col md:flex-row items-center gap-4">
+                            <div class="md:w-1/2 md:text-right md:pr-8">
+                                <div class="bg-white p-6 rounded-xl shadow-md border border-sky-100 inline-block">
+                                    <span class="text-sky-600 font-bold">2021 - Present</span>
+                                    <h4 class="text-lg font-semibold text-gray-800 mt-1">Digital Marketing Manager</h4>
+                                    <p class="text-gray-600 text-sm mt-2">Leading digital campaigns and analytics-driven marketing strategies</p>
+                                </div>
+                            </div>
+                            <div class="w-4 h-4 bg-sky-600 rounded-full border-4 border-white shadow-md z-10 hidden md:block"></div>
+                            <div class="md:w-1/2 md:pl-8"></div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="flex flex-col md:flex-row items-center gap-4">
+                            <div class="md:w-1/2 md:text-right md:pr-8 md:order-1"></div>
+                            <div class="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-md z-10 hidden md:block md:order-2"></div>
+                            <div class="md:w-1/2 md:pl-8 md:order-3">
+                                <div class="bg-white p-6 rounded-xl shadow-md border border-blue-100 inline-block">
+                                    <span class="text-blue-600 font-bold">2019 - 2021</span>
+                                    <h4 class="text-lg font-semibold text-gray-800 mt-1">System Analyst</h4>
+                                    <p class="text-gray-600 text-sm mt-2">Analyzing business processes and implementing technical solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="flex flex-col md:flex-row items-center gap-4">
+                            <div class="md:w-1/2 md:text-right md:pr-8">
+                                <div class="bg-white p-6 rounded-xl shadow-md border border-emerald-100 inline-block">
+                                    <span class="text-emerald-600 font-bold">2017 - 2019</span>
+                                    <h4 class="text-lg font-semibold text-gray-800 mt-1">Started My Journey</h4>
+                                    <p class="text-gray-600 text-sm mt-2">Building foundation in IT and marketing fundamentals</p>
+                                </div>
+                            </div>
+                            <div class="w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-md z-10 hidden md:block"></div>
+                            <div class="md:w-1/2 md:pl-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mb-16 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800 font-poppins">
+                    <i class="fas fa-certificate text-yellow-500 mr-2"></i>Certifications & Badges
+                </h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Analytics" class="w-12 h-12 mb-2">
+                        <span class="text-sm font-medium text-gray-700">Google Analytics</span>
+                        <span class="text-xs text-gray-400">Certified</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fab fa-hubspot text-4xl text-orange-500 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">HubSpot</span>
+                        <span class="text-xs text-gray-400">Inbound Marketing</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fab fa-facebook text-4xl text-blue-600 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">Meta Blueprint</span>
+                        <span class="text-xs text-gray-400">Digital Marketing</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition">
+                        <i class="fas fa-chart-pie text-4xl text-green-600 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">Data Analytics</span>
+                        <span class="text-xs text-gray-400">Professional</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Personal Touch -->
+            <div class="scroll-reveal">
+                <div class="bg-gradient-to-r from-sky-50 via-blue-50 to-purple-50 rounded-2xl p-8 border border-sky-100">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 flex items-center gap-2">
+                        <i class="fas fa-heart text-red-400"></i> When I'm Not Working...
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        You'll find me exploring the latest tech trends, reading about digital innovation, or enjoying a good cup of coffee while brainstorming new ideas. I'm passionate about mentoring aspiring professionals and believe in the power of continuous learning. When I need to unwind, I enjoy spending time with family and exploring nature.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Fun Facts -->
+            <div class="mt-12 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800 flex items-center justify-center gap-2">
+                    <i class="fas fa-smile-wink text-yellow-500"></i> Fun Stats
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center p-5 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-2 text-amber-600"><i class="fas fa-mug-hot"></i></div>
+                        <div class="text-2xl font-bold text-gray-800 counter" data-target="500">0</div>
+                        <div class="text-sm text-gray-500 mt-1">Cups of Coffee</div>
+                    </div>
+                    <div class="text-center p-5 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-2 text-purple-600"><i class="fas fa-headphones"></i></div>
+                        <div class="text-2xl font-bold text-gray-800 counter" data-target="1000">0</div>
+                        <div class="text-sm text-gray-500 mt-1">Hours of Podcasts</div>
+                    </div>
+                    <div class="text-center p-5 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-2 text-blue-600"><i class="fas fa-book-open"></i></div>
+                        <div class="text-2xl font-bold text-gray-800 counter" data-target="50">0</div>
+                        <div class="text-sm text-gray-500 mt-1">Books Read</div>
+                    </div>
+                    <div class="text-center p-5 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-2 text-yellow-500"><i class="fas fa-lightbulb"></i></div>
+                        <div class="text-2xl font-bold text-gray-800 counter" data-target="999">0</div>
+                        <div class="text-sm text-gray-500 mt-1">Ideas Brainstormed</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+    <section id="skills" class="py-20 px-4 bg-gradient-to-b from-sky-50 via-white to-blue-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-900 font-poppins">Skills & Expertise</h2>
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-sky-600 font-semibold text-sm uppercase tracking-wider">What I Bring to the Table</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 text-gray-900 font-poppins">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <!-- Services I Offer -->
+            <div class="mb-16 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800 font-poppins">
+                    <i class="fas fa-hand-holding-heart text-sky-600 mr-2"></i>Services I Offer
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="group bg-white p-6 rounded-2xl border-2 border-sky-100 shadow-lg hover:shadow-xl hover:border-sky-300 transition-all hover:transform hover:scale-105">
+                        <div class="w-14 h-14 bg-sky-600 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-sky-200 transition">
+                            <i class="fas fa-sitemap text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Systems Analysis</h4>
+                        <p class="text-gray-600 text-sm">Analyzing and optimizing business processes to improve efficiency and reduce costs.</p>
+                    </div>
+                    <div class="group bg-white p-6 rounded-2xl border-2 border-sky-100 shadow-lg hover:shadow-xl hover:border-sky-300 transition-all hover:transform hover:scale-105">
+                        <div class="w-14 h-14 bg-sky-700 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-sky-200 transition">
+                            <i class="fas fa-bullhorn text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Digital Marketing</h4>
+                        <p class="text-gray-600 text-sm">Creating data-driven campaigns that boost engagement and drive conversions.</p>
+                    </div>
+                    <div class="group bg-white p-6 rounded-2xl border-2 border-sky-100 shadow-lg hover:shadow-xl hover:border-sky-300 transition-all hover:transform hover:scale-105">
+                        <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-blue-200 transition">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Process Automation</h4>
+                        <p class="text-gray-600 text-sm">Streamlining workflows through automation to save time and resources.</p>
+                    </div>
+                </div>
+            </div>
             
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <!-- Technical Skills -->
-                <div class="glass-card-dark p-8 rounded-2xl border-2 border-sky-300">
+                <div class="bg-white p-8 rounded-2xl border-2 border-sky-100 shadow-lg scroll-reveal">
                     <h3 class="text-2xl font-semibold mb-8 text-sky-700 font-poppins flex items-center gap-3">
-                        <i class="fas fa-cogs text-2xl"></i> Technical Skills
+                        <i class="fas fa-code text-2xl"></i> Technical Skills
                     </h3>
-                    <div class="space-y-4">
-                        <div class="skill-card">
+                    <div class="space-y-5">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Systems Analysis</span>
-                                <span class="text-sky-700 font-semibold">85%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-sky-500 to-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-sky-600 h-2.5 rounded-full" data-width="90%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Process Optimization</span>
-                                <span class="text-sky-700 font-semibold">80%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-sky-500 to-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-sky-500 h-2.5 rounded-full" data-width="85%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Database Management</span>
-                                <span class="text-sky-700 font-semibold">75%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Proficient</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-sky-500 to-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-blue-600 h-2.5 rounded-full" data-width="75%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Business Analysis</span>
-                                <span class="text-sky-700 font-semibold">78%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-sky-500 to-blue-600 h-2 rounded-full" style="width: 78%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-blue-500 h-2.5 rounded-full" data-width="80%" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Marketing Skills -->
-                <div class="glass-card-dark p-8 rounded-2xl border-2 border-blue-300">
-                    <h3 class="text-2xl font-semibold mb-8 text-blue-700 font-poppins flex items-center gap-3">
+                <div class="bg-white p-8 rounded-2xl border-2 border-sky-100 shadow-lg scroll-reveal">
+                    <h3 class="text-2xl font-semibold mb-8 text-sky-700 font-poppins flex items-center gap-3">
                         <i class="fas fa-chart-line text-2xl"></i> Marketing Skills
                     </h3>
-                    <div class="space-y-4">
-                        <div class="skill-card">
+                    <div class="space-y-5">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Digital Strategy</span>
-                                <span class="text-blue-700 font-semibold">88%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-2 rounded-full" style="width: 88%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-sky-600 h-2.5 rounded-full" data-width="92%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Analytics & Reporting</span>
-                                <span class="text-blue-700 font-semibold">82%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-2 rounded-full" style="width: 82%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-sky-500 h-2.5 rounded-full" data-width="85%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Campaign Management</span>
-                                <span class="text-blue-700 font-semibold">80%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Advanced</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-2 rounded-full" style="width: 80%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-blue-600 h-2.5 rounded-full" data-width="80%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="skill-card">
+                        <div class="skill-item">
                             <div class="flex justify-between mb-2">
                                 <span class="text-gray-700 font-medium">Content Marketing</span>
-                                <span class="text-blue-700 font-semibold">85%</span>
+                                <span class="text-sky-600 font-semibold text-sm px-2 py-0.5 bg-sky-100 rounded-full">Expert</span>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-2 rounded-full" style="width: 85%"></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-progress bg-blue-500 h-2.5 rounded-full" data-width="88%" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Soft Skills -->
+            <div class="mb-12 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800 font-poppins">
+                    <i class="fas fa-users text-sky-600 mr-2"></i>Soft Skills
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="group text-center p-6 bg-white rounded-2xl border-2 border-sky-100 shadow-md hover:shadow-lg hover:border-sky-300 transition">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-sky-600 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg shadow-sky-200">
+                            <i class="fas fa-comments text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-gray-800 font-semibold">Communication</h4>
+                        <p class="text-gray-500 text-sm mt-1">Clear & Effective</p>
+                    </div>
+                    <div class="group text-center p-6 bg-white rounded-2xl border-2 border-sky-100 shadow-md hover:shadow-lg hover:border-sky-300 transition">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-sky-700 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg shadow-sky-200">
+                            <i class="fas fa-crown text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-gray-800 font-semibold">Leadership</h4>
+                        <p class="text-gray-500 text-sm mt-1">Team Guidance</p>
+                    </div>
+                    <div class="group text-center p-6 bg-white rounded-2xl border-2 border-sky-100 shadow-md hover:shadow-lg hover:border-sky-300 transition">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg shadow-blue-200">
+                            <i class="fas fa-puzzle-piece text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-gray-800 font-semibold">Problem Solving</h4>
+                        <p class="text-gray-500 text-sm mt-1">Creative Solutions</p>
+                    </div>
+                    <div class="group text-center p-6 bg-white rounded-2xl border-2 border-sky-100 shadow-md hover:shadow-lg hover:border-sky-300 transition">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg shadow-blue-200">
+                            <i class="fas fa-handshake text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-gray-800 font-semibold">Collaboration</h4>
+                        <p class="text-gray-500 text-sm mt-1">Team Player</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Work Approach -->
+            <div class="mb-12 scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-gray-800 font-poppins">
+                    <i class="fas fa-route text-sky-600 mr-2"></i>My Work Approach
+                </h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="relative text-center p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-sky-200 z-10">1</div>
+                        <h4 class="text-gray-800 font-semibold mb-2 mt-4">Discover</h4>
+                        <p class="text-gray-600 text-sm">Understanding your needs and goals</p>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-[calc(50%+32px)] right-0 h-0.5 bg-gradient-to-r from-sky-500 to-sky-600"></div>
+                    </div>
+                    <div class="relative text-center p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-sky-200 z-10">2</div>
+                        <h4 class="text-gray-800 font-semibold mb-2 mt-4">Analyze</h4>
+                        <p class="text-gray-600 text-sm">Deep dive into data and processes</p>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-0 right-[calc(50%+32px)] h-0.5 bg-gradient-to-r from-sky-500 to-sky-600"></div>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-[calc(50%+32px)] right-0 h-0.5 bg-gradient-to-r from-sky-600 to-sky-700"></div>
+                    </div>
+                    <div class="relative text-center p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-sky-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-sky-200 z-10">3</div>
+                        <h4 class="text-gray-800 font-semibold mb-2 mt-4">Strategize</h4>
+                        <p class="text-gray-600 text-sm">Crafting tailored solutions</p>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-0 right-[calc(50%+32px)] h-0.5 bg-gradient-to-r from-sky-600 to-sky-700"></div>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-[calc(50%+32px)] right-0 h-0.5 bg-gradient-to-r from-sky-700 to-blue-600"></div>
+                    </div>
+                    <div class="relative text-center p-6 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-blue-200 z-10">4</div>
+                        <h4 class="text-gray-800 font-semibold mb-2 mt-4">Execute</h4>
+                        <p class="text-gray-600 text-sm">Delivering measurable results</p>
+                        <div class="hidden md:block absolute top-[calc(1.5rem+32px)] left-0 right-[calc(50%+32px)] h-0.5 bg-gradient-to-r from-sky-700 to-blue-600"></div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Tools & Technologies -->
-            <div class="glass-card-dark p-8 rounded-2xl border-2 border-green-300">
-                <h3 class="text-2xl font-semibold mb-8 text-green-700 font-poppins flex items-center gap-3">
+            <div class="bg-white p-8 rounded-2xl border-2 border-sky-100 shadow-lg scroll-reveal">
+                <h3 class="text-2xl font-semibold mb-8 text-sky-700 font-poppins flex items-center gap-3">
                     <i class="fas fa-tools"></i> Tools & Technologies
                 </h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="tool-badge"><i class="fas fa-file-word text-blue-600"></i><span>Microsoft Office</span></div>
-                    <div class="tool-badge"><i class="fas fa-chart-bar text-blue-600"></i><span>Google Analytics</span></div>
-                    <div class="tool-badge"><i class="fas fa-cube text-blue-600"></i><span>Tableau/Power BI</span></div>
-                    <div class="tool-badge"><i class="fas fa-tasks text-blue-600"></i><span>Project Mgmt</span></div>
-                    <div class="tool-badge"><i class="fas fa-database text-blue-600"></i><span>CRM Systems</span></div>
-                    <div class="tool-badge"><i class="fas fa-search text-blue-600"></i><span>SEO/SEM Tools</span></div>
-                    <div class="tool-badge"><i class="fas fa-share-alt text-blue-600"></i><span>Social Media</span></div>
-                    <div class="tool-badge"><i class="fas fa-envelope text-blue-600"></i><span>Email Marketing</span></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fab fa-google text-2xl text-sky-600"></i>
+                        <span class="text-gray-700">Google Analytics</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fas fa-database text-2xl text-sky-700"></i>
+                        <span class="text-gray-700">SQL / Databases</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fas fa-chart-bar text-2xl text-blue-600"></i>
+                        <span class="text-gray-700">Power BI / Tableau</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fab fa-hubspot text-2xl text-sky-600"></i>
+                        <span class="text-gray-700">HubSpot CRM</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fab fa-facebook text-2xl text-blue-600"></i>
+                        <span class="text-gray-700">Meta Ads</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fab fa-microsoft text-2xl text-sky-500"></i>
+                        <span class="text-gray-700">Microsoft 365</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fas fa-mail-bulk text-2xl text-sky-700"></i>
+                        <span class="text-gray-700">Mailchimp</span>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-300 hover:bg-sky-50 transition">
+                        <i class="fab fa-slack text-2xl text-blue-500"></i>
+                        <span class="text-gray-700">Slack / Teams</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -492,7 +795,7 @@
                 <div class="p-6 bg-white rounded-xl border-2 border-sky-100 shadow-sm">
                     <i class="fas fa-envelope text-3xl text-sky-700 mb-3 block"></i>
                     <h4 class="font-semibold text-gray-900 mb-2">Email</h4>
-                    <p class="text-gray-600 text-sm">contact@ggitaibrahim.com</p>
+                    <p class="text-gray-600 text-sm">contact@Ggitaibrahim.com</p>
                 </div>
                 <div class="p-6 bg-white rounded-xl border-2 border-blue-100 shadow-sm">
                     <i class="fas fa-phone text-3xl text-blue-700 mb-3 block"></i>
@@ -520,7 +823,7 @@
             </div>
 
             <p class="mt-8 text-gray-500">
-                © 2026 GGita Ibrahim. All rights reserved.
+                © 2026 Ggita Ibrahim. All rights reserved.
             </p>
         </div>
     </section>
