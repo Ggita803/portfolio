@@ -1,9 +1,156 @@
 /* Custom CSS for Portfolio - Blue Theme */
 
+/* Active Nav Link */
+.nav-link.active,
+.mobile-nav-link.active {
+    color: #0369a1;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0369a1;
+    border-radius: 2px;
+}
+
+/* Mobile Slide-in Menu */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-overlay.active .mobile-menu-panel {
+    transform: translateX(0);
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Floating Tech Icons */
+.floating-icons {
+    pointer-events: none;
+}
+
+.floating-icon {
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+
+.floating-icon:nth-child(1) { animation-delay: 0s; }
+.floating-icon:nth-child(2) { animation-delay: 0.5s; }
+.floating-icon:nth-child(3) { animation-delay: 1s; }
+.floating-icon:nth-child(4) { animation-delay: 1.5s; }
+.floating-icon:nth-child(5) { animation-delay: 2s; }
+.floating-icon:nth-child(6) { animation-delay: 2.5s; }
+
 /* Dot Pattern Background */
 .dot-pattern {
     background-image: radial-gradient(circle, rgba(3, 105, 161, 0.1) 1px, transparent 1px);
     background-size: 24px 24px;
+}
+
+/* Availability Badge Pulse */
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.availability-pulse {
+    position: relative;
+}
+
+.availability-pulse::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* Image Hover Glow Effect */
+.image-glow {
+    transition: all 0.4s ease;
+}
+
+.image-glow:hover {
+    box-shadow: 0 0 40px rgba(3, 105, 161, 0.5), 0 0 80px rgba(3, 105, 161, 0.3);
+    border-color: #0369a1;
+    transform: scale(1.02);
+}
+
+.image-glow:hover img {
+    transform: scale(1.05);
+}
+
+.image-glow img {
+    transition: transform 0.4s ease;
 }
 
 /* Typing Effect */

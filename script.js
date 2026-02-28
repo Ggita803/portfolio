@@ -1,14 +1,71 @@
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menuBtn');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.remove('hidden');
+    setTimeout(() => mobileMenu.classList.add('active'), 10);
 });
+
+closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+});
+
+// Close menu when clicking overlay
+mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    }
+});
+
+// Close mobile menu when a link is clicked
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    });
+});
+
+// Active Link on Scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+function setActiveLink() {
+    const scrollY = window.scrollY;
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+            mobileNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', setActiveLink);
+setActiveLink(); // Run on load
 
 // Typing Effect
 const typingElement = document.getElementById('typing-text');
-const roles = ['System Analyst', 'Digital Marketing Manager'];
+const roles = ['System Analyst', 'Digital Marketing Manager', 'Data Analyst', 'Process Optimizer', 'Tech Strategist'];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -42,14 +99,6 @@ function typeEffect() {
 
 // Start typing effect
 typeEffect();
-
-// Close mobile menu when a link is clicked
-const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-});
 
 // Smooth scroll to sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

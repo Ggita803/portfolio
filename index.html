@@ -22,30 +22,72 @@
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-sky-700 transition font-medium">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-sky-700 transition font-medium">About</a>
-                    <a href="#skills" class="text-gray-600 hover:text-sky-700 transition font-medium">Skills</a>
-                    <a href="#projects" class="text-gray-600 hover:text-sky-700 transition font-medium">Projects</a>
-                    <a href="#contact" class="text-gray-600 hover:text-sky-700 transition font-medium">Contact</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-home text-sm"></i>Home
+                    </a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-user text-sm"></i>About
+                    </a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-code text-sm"></i>Skills
+                    </a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-briefcase text-sm"></i>Projects
+                    </a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-envelope text-sm"></i>Contact
+                    </a>
+                    <a href="cv/GGita_Ibrahim_CV.pdf" download class="text-gray-600 hover:text-sky-700 transition font-medium flex items-center gap-1.5">
+                        <i class="fas fa-file-download text-sm"></i>Resume
+                    </a>
+                    <a href="#contact" class="ml-2 px-5 py-2 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-md">
+                        Let's Talk
+                    </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <button id="menuBtn" class="md:hidden text-sky-700 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
+                    <i class="fas fa-bars text-2xl" id="menuIcon"></i>
                 </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="#home" class="block text-gray-600 hover:text-sky-700 py-2 transition font-medium">Home</a>
-                <a href="#about" class="block text-gray-600 hover:text-sky-700 py-2 transition font-medium">About</a>
-                <a href="#skills" class="block text-gray-600 hover:text-sky-700 py-2 transition font-medium">Skills</a>
-                <a href="#projects" class="block text-gray-600 hover:text-sky-700 py-2 transition font-medium">Projects</a>
-                <a href="#contact" class="block text-gray-600 hover:text-sky-700 py-2 transition font-medium">Contact</a>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobileMenu" class="mobile-menu-overlay hidden">
+        <div class="mobile-menu-panel">
+            <div class="flex justify-between items-center p-4 border-b border-sky-100">
+                <span class="text-xl font-bold font-poppins text-sky-700">Menu</span>
+                <button id="closeMenuBtn" class="text-gray-500 hover:text-sky-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="p-4 space-y-4">
+                <a href="#home" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-home text-sky-600 w-5"></i>Home
+                </a>
+                <a href="#about" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-user text-sky-600 w-5"></i>About
+                </a>
+                <a href="#skills" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-code text-sky-600 w-5"></i>Skills
+                </a>
+                <a href="#projects" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-briefcase text-sky-600 w-5"></i>Projects
+                </a>
+                <a href="#contact" class="mobile-nav-link block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-envelope text-sky-600 w-5"></i>Contact
+                </a>
+                <a href="cv/GGita_Ibrahim_CV.pdf" download class="block text-gray-600 hover:text-sky-700 py-3 transition font-medium flex items-center gap-3 border-b border-gray-100">
+                    <i class="fas fa-file-download text-sky-600 w-5"></i>Resume
+                </a>
+                <a href="#contact" class="block w-full text-center px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition mt-4">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-white dot-pattern">
@@ -56,31 +98,51 @@
         <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div>
-                <p class=" text-xl text-sky-700 font-bold  mb-2">Hello, I'm</p>
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight font-poppins text-gray-900">
+                <p class="text-xl text-sky-700 font-bold mb-2 animate-fade-in-up">Hello, I'm</p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight font-poppins text-gray-900 animate-fade-in-up" style="animation-delay: 0.1s;">
                     GGita Ibrahim
                 </h1>
-                <p class="text-xl md:text-2xl text-sky-700 mb-6 font-poppins font-semibold">
+                <p class="text-xl md:text-2xl text-sky-700 mb-4 font-poppins font-semibold animate-fade-in-up" style="animation-delay: 0.2s;">
                     <span id="typing-text" class="typing-text">System Analyst</span>
                 </p>
-                <p class="text-base text-gray-600 mb-8 leading-relaxed max-w-md">
-                    Bridging technology and strategy to drive business growth through data-driven solutions.
+                
+                <!-- Specialization Tags -->
+                <div class="flex flex-wrap gap-2 mb-6 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <span class="px-3 py-1 bg-sky-100 text-sky-700 text-sm font-medium rounded-full border border-sky-200">
+                        <i class="fas fa-chart-line mr-1"></i>Data Analytics
+                    </span>
+                    <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200">
+                        <i class="fas fa-bullhorn mr-1"></i>Digital Marketing
+                    </span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full border border-purple-200">
+                        <i class="fas fa-cogs mr-1"></i>Process Automation
+                    </span>
+                </div>
+                
+                <p class="text-base text-gray-600 mb-8 leading-relaxed max-w-md animate-fade-in-up" style="animation-delay: 0.4s;">
+                    I streamline business systems and run digital campaigns that get real results. Whether it's optimizing workflows or boosting your online presence — I've got you covered.
                 </p>
                 
-                <div class="flex gap-4 flex-wrap">
+                <!-- Location/Remote Badge -->
+                <div class="flex items-center gap-2 mb-6 text-sm text-gray-500 animate-fade-in-up" style="animation-delay: 0.5s;">
+                    <i class="fas fa-map-marker-alt text-sky-600"></i>
+                    <span>Uganda</span>
+                    <span class="text-gray-300">|</span>
+                    <i class="fas fa-globe text-sky-600"></i>
+                    <span>Open to Remote Work</span>
+                </div>
+                
+                <div class="flex gap-4 flex-wrap animate-fade-in-up" style="animation-delay: 0.6s;">
                     <a href="#projects" class="px-6 py-3 bg-sky-700 hover:bg-sky-800 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
                         <i class="fas fa-briefcase mr-2"></i>View Work
                     </a>
                     <a href="cv/GGita_Ibrahim_CV.pdf" download class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition transform hover:scale-105 shadow-lg">
                         <i class="fas fa-download mr-2"></i>Download CV
                     </a>
-                    <a href="#contact" class="px-6 py-3 border-2 border-sky-700 text-sky-700 hover:bg-sky-50 rounded-lg font-semibold transition">
-                        <i class="fas fa-envelope mr-2"></i>Contact Me
-                    </a>
                 </div>
 
                 <!-- Social Links Hero -->
-                <div class="flex gap-5 mt-8">
+                <div class="flex gap-5 mt-8 animate-fade-in-up" style="animation-delay: 0.7s;">
                     <a href="#" class="text-gray-400 hover:text-sky-700 transition text-xl" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -94,13 +156,54 @@
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
+                
+                <!-- Mini Testimonial -->
+                <div class="mt-8 p-4 bg-white/70 backdrop-blur-sm rounded-xl border border-sky-100 shadow-sm max-w-md animate-fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-quote-left text-sky-300 text-lg mt-1"></i>
+                        <div>
+                            <p class="text-gray-600 text-sm italic">"GGita transformed our marketing strategy and increased our online engagement by 60%. Highly recommended!"</p>
+                            <p class="text-xs text-gray-400 mt-2 font-medium">— Happy Client</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Right - Profile Image (Circular) -->
-            <div class="relative flex items-center justify-center">
+            <div class="relative flex items-center justify-center animate-fade-in-up" style="animation-delay: 0.5s;">
                 <div class="absolute w-72 h-72 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] bg-gradient-to-br from-sky-400 to-blue-600 rounded-full blur-2xl opacity-20"></div>
-                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-sky-300 shadow-2xl overflow-hidden">
-                    <img src="img/Gitta_Ibrahim.jpeg" alt="GGita Ibrahim" class="w-full h-full object-cover">
+                
+                <!-- Floating Tech Icons -->
+                <div class="absolute w-80 h-80 md:w-[400px] md:h-[400px] lg:w-[480px] lg:h-[480px] floating-icons">
+                    <div class="floating-icon absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 0s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Analytics" class="w-7 h-7">
+                    </div>
+                    <div class="floating-icon absolute top-1/4 right-0 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 0.5s;">
+                        <i class="fab fa-facebook text-blue-600 text-2xl"></i>
+                    </div>
+                    <div class="floating-icon absolute bottom-1/4 right-0 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 1s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="w-7 h-7">
+                    </div>
+                    <div class="floating-icon absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 1.5s;">
+                        <i class="fas fa-chart-bar text-emerald-600 text-xl"></i>
+                    </div>
+                    <div class="floating-icon absolute bottom-1/4 left-0 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 2s;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-7 h-7">
+                    </div>
+                    <div class="floating-icon absolute top-1/4 left-0 w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center" style="animation-delay: 2.5s;">
+                        <i class="fab fa-hubspot text-orange-500 text-2xl"></i>
+                    </div>
+                </div>
+                
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-sky-300 shadow-2xl overflow-hidden image-glow">
+                    <img src="img/Gitta_Ibrahim.jpeg" alt="Ggita Ibrahim" class="w-full h-full object-cover">
+                </div>
+                <!-- Availability Badge -->
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-full px-4 py-2 shadow-lg border border-green-200 availability-pulse">
+                    <span class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                        <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+                        Available for Work
+                    </span>
                 </div>
             </div>
         </div>
@@ -108,6 +211,24 @@
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <i class="fas fa-chevron-down text-sky-700 text-2xl"></i>
+        </div>
+        
+        <!-- Trusted By Section -->
+        <div class="absolute bottom-24 md:bottom-28 left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4 animate-fade-in-up" style="animation-delay: 1s;">
+            <p class="text-center text-xs text-gray-400 uppercase tracking-wider mb-3">Trusted by professionals at</p>
+            <div class="flex justify-center items-center gap-6 md:gap-10 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <div class="text-gray-400 font-semibold text-sm">Company 1</div>
+                <div class="text-gray-400 font-semibold text-sm">Company 2</div>
+                <div class="text-gray-400 font-semibold text-sm">Company 3</div>
+                <div class="text-gray-400 font-semibold text-sm">Company 4</div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-16 md:h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.1,118.92,156.63,69.08,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
         </div>
     </section>
 
