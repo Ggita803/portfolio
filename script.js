@@ -136,14 +136,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Form Handling
 const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Get form values
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    const message = contactForm.querySelector('textarea').value;
+    const name = contactForm.querySelector('input[name="name"]').value;
+    const email = contactForm.querySelector('input[name="email"]').value;
+    const message = contactForm.querySelector('textarea[name="message"]').value;
 
     // Simple validation
     if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
@@ -158,11 +159,81 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Success message
-    alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon!`);
+    // Show success message
+    contactForm.classList.add('hidden');
+    formSuccess.classList.remove('hidden');
     
-    // Reset form
-    contactForm.reset();
+    // Reset form after delay
+    setTimeout(() => {
+        contactForm.reset();
+        contactForm.classList.remove('hidden');
+        formSuccess.classList.add('hidden');
+    }, 5000);
+});
+
+// Contact Form Tabs
+const contactTabBtns = document.querySelectorAll('.contact-tab-btn');
+const projectFields = document.getElementById('projectFields');
+const budgetField = document.getElementById('budgetField');
+
+contactTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active state
+        contactTabBtns.forEach(b => {
+            b.classList.remove('active', 'bg-sky-600', 'text-white');
+            b.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        btn.classList.add('active', 'bg-sky-600', 'text-white');
+        btn.classList.remove('bg-gray-100', 'text-gray-600');
+        
+        // Toggle fields based on tab
+        const tab = btn.getAttribute('data-tab');
+        if (tab === 'project') {
+            projectFields.classList.remove('hidden');
+            budgetField.classList.remove('hidden');
+            document.querySelector('textarea[name="message"]').placeholder = 'Tell me about your project...';
+        } else {
+            projectFields.classList.add('hidden');
+            budgetField.classList.add('hidden');
+            document.querySelector('textarea[name="message"]').placeholder = 'Say hello! What\'s on your mind?';
+        }
+    });
+});
+
+// Initialize first tab
+if (contactTabBtns.length > 0) {
+    contactTabBtns[0].classList.add('bg-sky-600', 'text-white');
+    contactTabBtns[0].classList.remove('bg-gray-100', 'text-gray-600');
+}
+
+// FAQ Accordion
+const faqToggles = document.querySelectorAll('.faq-toggle');
+
+faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const faqItem = toggle.parentElement;
+        const content = faqItem.querySelector('.faq-content');
+        const icon = toggle.querySelector('i');
+        
+        // Close all other FAQ items
+        faqToggles.forEach(otherToggle => {
+            if (otherToggle !== toggle) {
+                const otherItem = otherToggle.parentElement;
+                const otherContent = otherItem.querySelector('.faq-content');
+                const otherIcon = otherToggle.querySelector('i');
+                otherContent.classList.add('hidden');
+                otherIcon.style.transform = 'rotate(0deg)';
+            }
+        });
+        
+        // Toggle current FAQ item
+        content.classList.toggle('hidden');
+        if (content.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.style.transform = 'rotate(180deg)';
+        }
+    });
 });
 
 // Scroll animations
