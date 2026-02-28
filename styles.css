@@ -424,7 +424,9 @@ button[type="submit"]:hover {
     
     .float-animation,
     .float-animation-2 {
-        display: none;
+        width: 150px;
+        height: 150px;
+        opacity: 0.1;
     }
 }
 
