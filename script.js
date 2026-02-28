@@ -379,3 +379,47 @@ function animateSkillBars() {
 
 window.addEventListener('scroll', animateSkillBars);
 window.addEventListener('load', animateSkillBars);
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+function toggleBackToTop() {
+    if (window.scrollY > 500) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible');
+        backToTopBtn.classList.add('opacity-100', 'visible');
+    } else {
+        backToTopBtn.classList.add('opacity-0', 'invisible');
+        backToTopBtn.classList.remove('opacity-100', 'visible');
+    }
+}
+
+window.addEventListener('scroll', toggleBackToTop);
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Dynamic Year
+const currentYearEl = document.getElementById('currentYear');
+if (currentYearEl) {
+    currentYearEl.textContent = new Date().getFullYear();
+}
+
+// WhatsApp Button Pulse Animation
+const whatsappBtn = document.getElementById('whatsappBtn');
+let pulseInterval;
+
+function startWhatsAppPulse() {
+    pulseInterval = setInterval(() => {
+        whatsappBtn.classList.add('scale-110');
+        setTimeout(() => {
+            whatsappBtn.classList.remove('scale-110');
+        }, 300);
+    }, 3000);
+}
+
+// Start pulse after 5 seconds
+setTimeout(startWhatsAppPulse, 5000);
